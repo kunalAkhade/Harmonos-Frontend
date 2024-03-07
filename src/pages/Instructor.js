@@ -13,7 +13,7 @@ function Instructor() {
     const fetch = async () => {
       try {
         const user = await axios.get(
-          `http://localhost:8080/instructor/ins/${params.id}`,
+          `https://harmnos-backend.onrender.com/instructor/ins/${params.id}`,
           // { InstructorId: params.id },
           {
             headers: {

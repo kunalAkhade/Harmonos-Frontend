@@ -11,12 +11,15 @@ function AllUser() {
     const token = localStorage.getItem("token");
     const fetch = async () => {
       try {
-        const user = await axios.get(`http://localhost:8080/user/get-all`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-          },
-        });
+        const user = await axios.get(
+          `https://harmnos-backend.onrender.com/user/get-all`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+          }
+        );
         if (user.data.message) {
           setError(user.data.message);
         } else {
@@ -38,7 +41,7 @@ function AllUser() {
     const token = localStorage.getItem("token");
     try {
       const logout = await axios.get(
-        `http://localhost:8080/user/logout/${token}`,
+        `https://harmnos-backend.onrender.com/user/logout/${token}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

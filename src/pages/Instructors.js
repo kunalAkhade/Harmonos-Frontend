@@ -11,7 +11,7 @@ function Instructors() {
     const fetch = async () => {
       try {
         const user = await axios.get(
-          `http://localhost:8080/instructor/get-all`,
+          `https://harmnos-backend.onrender.com/instructor/get-all`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
